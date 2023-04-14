@@ -1,0 +1,27 @@
+<div>
+  <h1>{{data.name}}</h1>
+  {{#each data.listQuestion}}
+    <div id='question_28' class='detail_cauhoi width_common' style='display: block; margin-bottom: 30px;'>
+      <p class='cauhoi_txt' style='font-weight: bold;'>{{this.name}}</p>
+      <p class='noidung_cauhoi'>
+        {{this.content}}
+        {{#if (isNotNull this.image)}}
+          <br />
+          <img src={{this.image}} />
+        {{/if}}
+      </p>
+      <div class='width_common noidung_dapan'>
+        <ul>
+          {{#each this.answers}}
+            <li>
+              <label>
+                <input data-id='28' class='answer_option' type='checkbox' value='1347-28549_104379' />
+                <span id='span_104379'>{{this}}</span>
+              </label>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  {{/each}}
+</div>
