@@ -1,6 +1,6 @@
 const { execSync } = require('child_process');
 const { expect } = require('chai');
-const should = require('chai').should();
+require('chai').should();
 
 describe('case missing process.argv ', () => {
   it('should throw error Invalid search term', function () {
