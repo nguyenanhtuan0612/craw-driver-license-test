@@ -60,13 +60,13 @@ describe('case not .txt file', () => {
 });
 
 describe('no error', () => {
-  it('should 2 result found', function () {
+  it('path is dir and found word', function () {
     const data = execSync('node search.js là folder1').toString();
     const json = JSON.parse(data);
     json.should.be.a('array').with.lengthOf(2);
   });
 
-  it('should 0 result found', function () {
+  it('path is dir and not found word', function () {
     const data = execSync('node search.js meow folder1').toString();
     const json = JSON.parse(data);
     json.should.be.a('array').with.lengthOf(0);
